@@ -6,12 +6,114 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <title>Pizza</title>
+    <title>Build Your Pizza</title>
   </head>
   <body>
-    
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Build Your Pizza</h1>
+      </div>
+    </div>
+    <div class="container">
+      <form id="inputForm">
+        <hr>
+        <label for="inputSize">Choose a size:</label>
+        <select id="inputSize" class="form-control" required>
+          <option value="" disabled selected>--</option>
+          <option value="personal">Personal</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+          <option value="extra-large">Extra-Large</option>
+        </select>
+        <hr>
+        <div class="checkbox">
+          <label for="pepperoni">
+            <input type="checkbox" id="pepperoni" value="Pepperoni">
+            Peperoni
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="sausage">
+            <input type="checkbox" id="sausage" value="Sausage">
+            Sausage
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="mushrooms">
+            <input type="checkbox" id="mushrooms" value="Mushrooms">
+            Mushrooms
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="olives">
+            <input type="checkbox" id="olives" value="Olives">
+            Olives
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="onions">
+            <input type="checkbox" id="onions" value="Onions">
+            Onions
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="spinach">
+            <input type="checkbox" id="spinach" value="Spinach">
+            Spinach
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="sun-dried-tomatoes">
+            <input type="checkbox" id="sun-dried-tomatoes" value="Sun-dried Tomatoes">
+            Sun-dried tomatoes
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="roasted-red-peppers">
+            <input type="checkbox" id="roasted-red-peppers" value="Roasted red peppers">
+            Roasted red peppers
+          </label>
+        </div>
+        <div class="checkbox">
+          <label for="pickled-jalapenos">
+            <input type="checkbox" id="pickled-jalapenos" value="Pickled jalapenos">
+            Pickled jalapenos
+          </label>
+        </div>
+        <hr>
+        <button id="placeOrder" type="submit" class="btn btn-primary">Place Order</button>
+        <hr>
+      </form>
 
-
+      <div id="outputModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">
+                <span>&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <h1>Thank you!</h1>
+              <p>
+                A drone will arrive with your pizza in:<br>
+                <strong>Less than 5 seconds.</strong>
+              </p>
+              <h3>Your Order:</h3>
+              <p>
+                One <span id="outputSize"></span><span id="outputCheese"> cheese</span> pizza <span id="outputToppings">with the following toppings:</span>
+              </p>
+              <ul id="outputToppingsUL">
+              </ul>
+            </div>
+            <div class="modal-footer">
+              <button id="orderAnother" type="button" class="btn btn-primary" data-dismiss="modal">Order another Pizza</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>

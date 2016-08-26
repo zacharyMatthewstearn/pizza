@@ -1,0 +1,45 @@
+body {
+  margin: 0 auto;
+  background-color: papayawhip
+}
+hr {
+  border-color: peru;
+}
+div.modal-body h1 {
+  margin: 0 0 1rem 0;
+}
+div.jumbotron {
+  padding: 26px 0;
+  background-color: maroon;
+  color: peachpuff;
+}
+div.jumbotron h1 {
+  text-align: center;
+}
+div.jumbotron h1,
+div.jumbotron {
+  margin: 0;
+}
+select#inputSize {
+  background-color: peachpuff;
+  border-color: peru;
+}
+button#placeOrder,
+button#orderAnother {
+  width: 100%;
+  background: none;
+  background-color: maroon;
+  border-color: peru;
+  border-width: medium;
+  color: peachpuff;
+}
+div#outputModal div.modal-content {
+  background-color: peachpuff;
+}
+div#outputModal div.modal-body {
+  background-color: papayawhip;
+}
+div#outputModal div.modal-header,
+div#outputModal div.modal-footer {
+  border-color: peru;
+}
