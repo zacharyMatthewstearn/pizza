@@ -30,7 +30,7 @@
         <div class="checkbox">
           <label for="pepperoni">
             <input type="checkbox" id="pepperoni" value="Pepperoni">
-            Peperoni
+            Pepperoni
           </label>
         </div>
         <div class="checkbox">
@@ -100,12 +100,16 @@
                 A drone will arrive with your pizza in:<br>
                 <strong>Less than 5 seconds.</strong>
               </p>
+              <hr>
               <h3>Your Order:</h3>
               <p>
                 One <span id="outputSize"></span><span id="outputCheese"> cheese</span> pizza <span id="outputToppings">with the following toppings:</span>
               </p>
               <ul id="outputToppingsUL">
               </ul>
+              <hr>
+              <h3>Price:</h3>
+              <p>$<span id="outputPrice"></span></p>
             </div>
             <div class="modal-footer">
               <button id="orderAnother" type="button" class="btn btn-primary" data-dismiss="modal">Order another Pizza</button>
