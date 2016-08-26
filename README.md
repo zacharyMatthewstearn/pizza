@@ -8,7 +8,71 @@
 
 A interactive website consisting of a single page whereupon a user may select a pizza to order, specifying a size and the toppings they would like, according to the following specs:
 
-################## ADD THIS ##################
+* Size options:
+  * Personal
+  * Small
+  * Medium
+  * Large
+  * Extra-Large
+
+* Available Toppings:
+  * Pepperoni (meat)
+  * Sausage (meat)
+  * Mushrooms
+  * Olives
+  * Onions
+  * Spinach
+  * Sun-dried tomatoes
+  * Roasted red peppers
+  * Pickled jalapenos
+
+* Final pricing scheme:
+  * Personal:
+    * no toppings: $10.00
+    * addition per non-meat topping: $0.50
+    * addition per meat topping: $1.00
+  * Small:
+    * no toppings: $15.00
+    * addition per non-meat topping: $0.75
+    * addition per meat topping: $1.50
+  * Medium:
+    * no toppings: $20.00
+    * addition per non-meat topping: $1.00
+    * addition per meat topping: $2.00
+  * Large:
+    * no toppings: $25.00
+    * addition per non-meat topping: $1.25
+    * addition per meat topping: $2.50
+  * Extra-Large:
+    * no toppings: $30.00
+    * addition per non-meat topping: $1.50
+    * addition per meat topping: $3.00
+
+* _SPECS:_
+  * _**Spec:** Create a single pizza for which the user may specify size (no toppings)_
+    * _**Example Input:** "Personal"_
+    * _**Example Output:** "Personal"_
+  * _**Spec:** Allow the user to add a single topping to their pizza_
+    * _**Example Input:** "Small", "Pepperoni"_
+    * _**Example Output:** "Small", "Pepperoni"_
+  * _**Spec:** Allow the user to add a single topping from amongst an array of topping choices_
+    * _**Example Input:** "Medium", "Sausage" (NOT Pepperoni, although that remains an option; 1/2 choices selected)_
+    * _**Example Output:** "Medium", "Sausage"_
+  * _**Spec:** allow the user to add multiple toppings from amongst an array of choices_
+    * _**Example Input:** "Large", ["Pepperoni", "Sausage"]_
+    * _**Example Output:** "Large", ["Pepperoni", "Sausage"]_
+  * _**Spec:** return a price to the user based solely upon the size of the pizza_
+    * _**Example Input:** "Extra-Large", "Olives"_
+    * _**Example Output:** "Extra-Large", "Olives", "$30.00"_
+  * _**Spec:** add a fixed amount to the price of the pizza per topping_
+    * _**Example Input:** "Personal", "Pepperoni"_
+    * _**Example Output:** "Personal", "Pepperoni", $10.50 ($10 base + flat rate of $0.50)_
+  * _**Spec:** add varying amounts to the price of the pizza per topping based upon the size of the pizza_
+    * _**Example Input:**  "Small", "Olives"_
+    * _**Example Output:** "Small", "Olives", "$15.75"_
+  * _**Spec:** building upon the variation in price per topping from the previous spec, further double the price for meat (and only meat) toppings_
+    * _**Example Input:** "Medium", ["Sausage", "Mushrooms"]_
+    * _**Example Output:** "Medium", ["Sausage", "Mushrooms"], "$23.00"_
 
 ## Setup/Installation Requirements
 
